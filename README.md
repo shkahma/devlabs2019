@@ -1,4 +1,4 @@
-# AWS Summit Sydney 2019 - Dev Central
+# AWS Summit Sydney 2019 - Dev Labs
 # Building an Egress proxy solution using Transit Gateway
 In this lab we will learn how to build and run a centralised NAT/Egress proxy solution using Transit Gateway. We'll start building with Egress VPC / Transit Gateway artifacts and in second phase, we'll build a Spoke VPC to test the reachability.
 
