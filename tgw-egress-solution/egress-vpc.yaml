@@ -20,6 +20,7 @@ Conditions:
   TwoAZs:  !Equals [ !Ref AZCount, 2 ]
 
 Resources:
+
   TransitGateway:
     Type: "AWS::EC2::TransitGateway"
     Properties:
@@ -58,7 +59,6 @@ Resources:
           Value: !Ref 'AWS::StackId'
         - Key: Name
           Value: !Sub Public-EgressVpc-${AWS::StackName}
-
   PublicEgressVpcSubnet2:
     Type: AWS::EC2::Subnet
     Condition: TwoAZs

@@ -1,5 +1,7 @@
 # AWS Summit Sydney 2019 - Dev Labs
 # Building an Egress proxy solution using Transit Gateway
+Author : Shakeel Ahmad | AWS Cloud Architect | Email : shkahma@amazon.com
+
 In this lab we will learn how to build and run a centralised NAT/Egress proxy solution using Transit Gateway. We'll start building with Egress VPC / Transit Gateway artifacts and in second phase, we'll build a Spoke VPC to test the reachability.
 
 The diagram below illustrates the high level architecture the lab will be using. 
@@ -10,10 +12,10 @@ The diagram below illustrates the high level architecture the lab will be using.
 
 Following are the key Cloud Formation Templates we'll use in this lab:
 
-| File name | Purpose |
-|-----------|---------|
-|egress-vpc.yaml| This template creates all necessary resources required for Egress VPC including TGW, Route Partitions, Route Tables, Attachments as well as squid based proxy servers in each AZ.|
-|spoke-vpc.yaml| This template will create a Spoke VPC in the same account and attachg it to TGW as well as update the route tables where necessary.|
+| File name | Purpose ||
+|-----------|---------|---------|
+|egress-vpc.yaml| This template creates all necessary resources required for Egress VPC including TGW, Route Partitions, Route Tables, Attachments as well as squid based proxy servers in each AZ.|[![Launch Stack in US-East-1](tgw-egress-solution/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=EgressVPC&templateURL=https://s3-ap-southeast-2.amazonaws.com/shkahma-devlabs2019/egress-vpc.yaml)|
+|spoke-vpc.yaml| This template will create a Spoke VPC in the same account and attachg it to TGW as well as update the route tables where necessary.|[![Launch Stack in US-East-1](tgw-egress-solution/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=SpokeVPC&templateURL=https://s3-ap-southeast-2.amazonaws.com/shkahma-devlabs2019/spoke-vpc.yaml)|
 
 Architecture:
 
@@ -52,12 +54,6 @@ Go to Cloud Formation on the AWS Web console.
 - Click Create to start the build.
 - Wait for Step 1 to be completed. Once completed, start Step 2.
 
-#### While you wait ... :
-
-- Click here to read all about TGW Offering: https://aws.amazon.com/transit-gateway/
-- Click here to read about TGW Pricings: https://aws.amazon.com/transit-gateway/pricing/
-- Click here to read about TGW FAQs: https://aws.amazon.com/transit-gateway/faqs/
-
 ### Step-2 : Create Spoke VPC & Test resources (Estimated Duration - 4 mins)
 
 **Command Line:**
@@ -91,10 +87,6 @@ If not already - Go to Cloud Formation on the AWS Web console.
 - Once the build is complete, click on "Outputs" window & note down "myEC2TestInstance" value. This is the test instance inside the VPC we'll use to test reachabaility.
 
 ![Instance](tgw-egress-solution/images/diagram5.png)
-
-#### While you wait ... :
-
-- Click here to read Jeff Barr's blog about "Use an AWS Transit Gateway to Simplify Your Network Architecture": https://aws.amazon.com/blogs/aws/new-use-an-aws-transit-gateway-to-simplify-your-network-architecture/
 
 
 ### Step-3 : Test & Play ! 
