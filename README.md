@@ -12,10 +12,10 @@ The diagram below illustrates the high level architecture the lab will be using.
 
 Following are the key Cloud Formation Templates we'll use in this lab:
 
-| File name | Purpose ||
-|-----------|---------|---------|
-|egress-vpc.yaml| This template creates all necessary resources required for Egress VPC including TGW, Route Partitions, Route Tables, Attachments as well as squid based proxy servers in each AZ.|[![Launch Stack in US-East-1](tgw-egress-solution/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=EgressVPC&templateURL=https://s3-ap-southeast-2.amazonaws.com/shkahma-devlabs2019/egress-vpc.yaml)|
-|spoke-vpc.yaml| This template will create a Spoke VPC in the same account and attachg it to TGW as well as update the route tables where necessary.|[![Launch Stack in US-East-1](tgw-egress-solution/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=SpokeVPC&templateURL=https://s3-ap-southeast-2.amazonaws.com/shkahma-devlabs2019/spoke-vpc.yaml)|
+| File name | Purpose |
+|-----------|---------|
+|egress-vpc.yaml| This template creates all necessary resources required for Egress VPC including TGW, Route Partitions, Route Tables, Attachments as well as squid based proxy servers in each AZ. [![Launch Stack in US-East-1](tgw-egress-solution/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=EgressVPC&templateURL=https://s3-ap-southeast-2.amazonaws.com/shkahma-devlabs2019/egress-vpc.yaml)|
+|spoke-vpc.yaml| This template will create a Spoke VPC in the same account and attachg it to TGW as well as update the route tables where necessary. [![Launch Stack in US-East-1](tgw-egress-solution/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=SpokeVPC&templateURL=https://s3-ap-southeast-2.amazonaws.com/shkahma-devlabs2019/spoke-vpc.yaml)|
 
 Architecture:
 
