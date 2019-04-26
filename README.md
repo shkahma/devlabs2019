@@ -1,4 +1,4 @@
-# AWS Summit Sydney 2019 - Dev Labs
+# AWS Summit Sydney 2019 - Dev Central
 # Building an Egress proxy solution using Transit Gateway
 Author : Shakeel Ahmad | AWS Cloud Architect | Email : shkahma@amazon.com
 
